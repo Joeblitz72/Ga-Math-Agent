@@ -6,11 +6,22 @@ with st.sidebar:
     st.header("⚙️ Agent Settings")
     
     # Ask for the simple password
+    # --- SIDEBAR: ACCESS CONTROL ---
+with st.sidebar:
+    st.header("⚙️ Agent Settings")
     user_password = st.text_input("Enter Password:", type="password")
     
-    # Check if the password matches your secret vault
-    if user_password == st.secrets.get("PASSWORD", ""):
-        api_key = st.secrets.get("GEMINI_API_KEY", "")
+    # Safely look for secrets so your local computer doesn't crash
+    try:
+        secret_password = st.secrets["PASSWORD"]
+        secret_api_key = st.secrets["GEMINI_API_KEY"]
+    except:
+        secret_password = "local" # Fallback so the app doesn't break on your desktop
+        secret_api_key = ""
+        
+    # Check if the password matches
+    if user_password == secret_password:
+        api_key = secret_api_key
         st.success("Access Granted!")
         authenticated = True
     else:
@@ -25,6 +36,6 @@ if not authenticated:
     st.info("Please enter the password in the sidebar to unlock the application.")
 else:
     st.title("🤖 Georgia K-8 Math Framework Agent")
+    st.write("Select a standard to generate a dynamic teaching sequence.")
     
-    # --- YOUR MAIN APP CODE LIVES HERE ---
-    # (Everything else: your Gemini setup, CSV loading, dropdowns, and chat interface must be indented under this 'else' block)
+    # --- ALL YOUR REMAINING APP CODE MUST BE INDENTED UNDER THIS ELSE BLOCK ---
