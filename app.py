@@ -7,9 +7,19 @@ st.set_page_config(page_title="GA Math Agent", layout="centered")
 # --- SIDEBAR: API KEY INPUT ---
 with st.sidebar:
     st.header("⚙️ Agent Settings")
+    # Ask for the simple password
+    user_password = st.text_input("Enter Password:", type="password")
+    
+    # Check if the password matches your secret vault
+    if user_password == st.secrets.get("PASSWORD", ""):
+        api_key = st.secrets.get("GEMINI_API_KEY", "")
+        st.success("Access Granted!")
+    else:
+        api_key = ""
+        if user_password != "":
+            st.error("Incorrect Password")
     api_key = st.text_input("Enter your Gemini API Key:", type="password")
-    default_key = st.secrets.get("GEMINI_API_KEY", "")
-api_key = st.text_input("Enter your Gemini API Key:", value=default_key, type="password")
+  
 st.write("Select a standard to generate a dynamic teaching sequence.")
 
 @st.cache_data
