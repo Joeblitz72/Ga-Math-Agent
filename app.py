@@ -8,9 +8,8 @@ st.set_page_config(page_title="GA Math Agent", layout="centered")
 with st.sidebar:
     st.header("⚙️ Agent Settings")
     api_key = st.text_input("Enter your Gemini API Key:", type="password")
-    st.markdown("[Get a free API key here](https://aistudio.google.com/)")
-
-st.title("GA K-8 Math Framework Agent")
+    default_key = st.secrets.get("GEMINI_API_KEY", "")
+api_key = st.text_input("Enter your Gemini API Key:", value=default_key, type="password")
 st.write("Select a standard to generate a dynamic teaching sequence.")
 
 @st.cache_data
