@@ -21,16 +21,27 @@ def load_data():
 
 # --- MAIN APP PORTAL ---
 if not authenticated:
-    # Default clean layout before password entry
     st.markdown("""
         <style>
-        .stApp { background-color: #f7fafc; }
-        .math-hero {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            padding: 30px; border-radius: 16px; color: white; text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 25px;
+        /* The Custom Mesh Gradient Background */
+        .stApp {
+            background-color: #f0fdf4;
+            background-image: 
+                radial-gradient(at 80% 0%, #bbf7d0 0px, transparent 50%),
+                radial-gradient(at 0% 50%, #fef08a 0px, transparent 50%),
+                radial-gradient(at 80% 100%, #bfdbfe 0px, transparent 50%),
+                radial-gradient(at 0% 0%, #e9d5ff 0px, transparent 50%);
+            background-attachment: fixed;
         }
-        .math-hero h1 { color: white !important; font-family: 'Chalkboard SE', sans-serif; font-size: 2.5rem !important; }
+        /* Glassmorphism Banner */
+        .math-hero {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%);
+            backdrop-filter: blur(10px);
+            padding: 30px; border-radius: 16px; color: white; text-align: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .math-hero h1 { color: white !important; font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif; font-size: 2.5rem !important; }
         </style>
         <div class="math-hero">
             <h1>📐 GA Math Assistant</h1>
@@ -42,10 +53,8 @@ else:
     try:
         df = load_data()
         
-        # Temporary layout initialization to render the first dropdown cleanly
         grades = sorted(df['Grade'].dropna().unique(), key=lambda x: (0, x) if x == 'K' else (1, int(x)))
         
-        # Grid layout for filters
         col1, col2 = st.columns(2)
         with col1:
             selected_grade = st.selectbox("🎯 1. Target Grade:", grades)
@@ -64,33 +73,39 @@ else:
             selected_sub_standard = st.selectbox("🔍 4. Specific Target Element:", sub_standards)
 
         # --- DYNAMIC GRADE-BAND THEMING ENGINE ---
-        # Define colors based on selected grade band
         if selected_grade in ['K', '1', '2']:
-            # Early Elementary: Warm, inviting orange/amber gradient
-            primary_gradient = "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)"
+            primary_gradient = "linear-gradient(135deg, rgba(245, 158, 11, 0.9) 0%, rgba(217, 119, 6, 0.9) 100%)"
             accent_color = "#d97706"
             btn_gradient = "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)"
         elif selected_grade in ['3', '4', '5']:
-            # Upper Elementary: High-energy emerald green
-            primary_gradient = "linear-gradient(135deg, #10b981 0%, #047857 100%)"
+            primary_gradient = "linear-gradient(135deg, rgba(16, 185, 129, 0.9) 0%, rgba(4, 120, 87, 0.9) 100%)"
             accent_color = "#047857"
             btn_gradient = "linear-gradient(135deg, #10b981 0%, #064e3b 100%)"
         else:
-            # Middle School (6-8): Sleek academic royal blue
-            primary_gradient = "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)"
+            primary_gradient = "linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%)"
             accent_color = "#1e3a8a"
             btn_gradient = "linear-gradient(135deg, #10b981 0%, #059669 100%)"
 
-        # Inject the dynamic CSS straight into the page session
         st.markdown(f"""
             <style>
-            .stApp {{ background-color: #f8fafc; }}
+            /* The Custom Mesh Gradient Background for Main App */
+            .stApp {{
+                background-color: #f0fdf4;
+                background-image: 
+                    radial-gradient(at 80% 0%, #bbf7d0 0px, transparent 50%),
+                    radial-gradient(at 0% 50%, #fef08a 0px, transparent 50%),
+                    radial-gradient(at 80% 100%, #bfdbfe 0px, transparent 50%),
+                    radial-gradient(at 0% 0%, #e9d5ff 0px, transparent 50%);
+                background-attachment: fixed;
+            }}
             
-            /* Main Header Card */
+            /* Glassmorphism Header Card */
             .math-hero {{
                 background: {primary_gradient};
+                backdrop-filter: blur(10px);
                 padding: 30px; border-radius: 16px; color: white; text-align: center;
-                box-shadow: 0 4px 15px rgba(0,0,0,0.08); margin-bottom: 25px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1); margin-bottom: 25px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }}
             .math-hero h1 {{
                 color: #ffffff !important;
@@ -98,11 +113,16 @@ else:
                 font-size: 2.5rem !important; margin-bottom: 5px;
             }}
             
-            /* Core Filter Display Card */
+            /* Frosted Glass Feature Cards */
             .feature-card {{
-                background-color: white; padding: 20px; border-radius: 12px;
+                background-color: rgba(255, 255, 255, 0.7);
+                backdrop-filter: blur(12px);
+                padding: 20px; border-radius: 12px;
                 border-left: 6px solid {accent_color};
-                box-shadow: 0 4px 12px rgba(0,0,0,0.03); margin-top: 10px; margin-bottom: 20px;
+                border-right: 1px solid rgba(255, 255, 255, 0.5);
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 0 8px 32px rgba(0,0,0,0.05); margin-top: 10px; margin-bottom: 20px;
             }}
             .feature-card-title {{ font-weight: bold; color: {accent_color}; font-size: 1.1rem; margin-bottom: 5px; }}
             
@@ -119,9 +139,11 @@ else:
             
             /* AI Output Step Cards */
             .lesson-step-card {{
-                background-color: white; border-radius: 10px; padding: 20px;
-                margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-                border: 1px solid #e2e8f0;
+                background-color: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(10px);
+                border-radius: 10px; padding: 20px; margin-bottom: 20px; 
+                box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+                border: 1px solid rgba(255, 255, 255, 0.6);
             }}
             .step-header {{
                 font-size: 1.3rem !important; font-weight: bold !important;
@@ -133,10 +155,15 @@ else:
             .sh-3 {{ color: #f59e0b; border-image: linear-gradient(to right, #f59e0b, rgba(0,0,0,0)) 1; }}
             .sh-4 {{ color: #8b5cf6; border-image: linear-gradient(to right, #8b5cf6, rgba(0,0,0,0)) 1; }}
             .sh-5 {{ color: #ec4899; border-image: linear-gradient(to right, #ec4899, rgba(0,0,0,0)) 1; }}
+            
+            /* Make Streamlit Dropdowns slightly transparent to match */
+            div[data-baseweb="select"] > div {{
+                background-color: rgba(255, 255, 255, 0.7) !important;
+                backdrop-filter: blur(5px);
+            }}
             </style>
         """, unsafe_allow_html=True)
 
-        # Render Main Banner
         st.markdown("""
             <div class="math-hero">
                 <h1>➕ GA Math Assistant</h1>
@@ -170,7 +197,6 @@ else:
                                 chosen_model = available_models[0].replace('models/', '')
                                 model = genai.GenerativeModel(chosen_model)
                                 
-                                # Instruct the AI to explicitly return cleanly styled HTML card blocks
                                 prompt = f"""
                                 You are an expert master teacher and curriculum designer for Georgia K-8 Math.
                                 Analyze this specific standard: {selected_sub_standard} - {standard_desc}
@@ -209,7 +235,6 @@ else:
                                 response = model.generate_content(prompt)
                                 st.success(f"Sequence Successfully Generated!")
                                 st.markdown("---")
-                                # Render the HTML output safely so the custom classes take effect
                                 st.markdown(response.text, unsafe_allow_html=True)
                             else:
                                 st.error("Your API key is valid, but Google is reporting zero available text models.")
