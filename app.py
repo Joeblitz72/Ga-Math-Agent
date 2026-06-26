@@ -28,7 +28,6 @@ with st.sidebar:
         if user_password != "":
             st.error("Incorrect Password")
 
-@st.cache_data
 def load_data():
     return pd.read_csv("ga_math_standards.csv")
 
@@ -40,28 +39,32 @@ else:
     st.title("🤖 GA K-8 Math Framework Agent")
     st.write("Select a standard to generate a dynamic teaching sequence.")
     
-    # --- ALL ORIGINAL APP LOGIC GOES HERE (INDENTED) ---
     try:
         df = load_data()
         
-        # Dropdowns
+        # 1. Grade Dropdown
         grades = sorted(df['Grade'].dropna().unique())
         selected_grade = st.selectbox("1. Choose Grade Level:", grades)
-
         filtered_df = df[df['Grade'] == selected_grade]
         
+        # 2. Big Idea Dropdown
         big_ideas = sorted(filtered_df['Big Idea'].dropna().unique())
         selected_big_idea = st.selectbox("2. Choose Big Idea:", big_ideas)
-
         filtered_df = filtered_df[filtered_df['Big Idea'] == selected_big_idea]
         
-        standards = sorted(filtered_df['Standard Code'].dropna().unique())
-        selected_standard = st.selectbox("3. Choose Standard:", standards)
+        # 3. Main Standard Dropdown (NEW)
+        main_standards = sorted(filtered_df['Standard'].dropna().unique())
+        selected_main_standard = st.selectbox("3. Choose Main Standard:", main_standards)
+        filtered_df = filtered_df[filtered_df['Standard'] == selected_main_standard]
 
-        if selected_standard:
-            standard_desc = filtered_df[filtered_df['Standard Code'] == selected_standard]['Standard Description'].values[0]
+        # 4. Sub-Standard Dropdown (NEW)
+        sub_standards = sorted(filtered_df['Sub-Standard'].dropna().unique())
+        selected_sub_standard = st.selectbox("4. Choose Specific Sub-Standard:", sub_standards)
+
+        if selected_sub_standard:
+            standard_desc = filtered_df[filtered_df['Sub-Standard'] == selected_sub_standard]['Description'].values[0]
             st.markdown("---")
-            st.subheader(f"{selected_standard}")
+            st.subheader(f"{selected_sub_standard}")
             st.write(f"**Description:** {standard_desc}")
             
             # --- AI GENERATION LOGIC ---
@@ -71,22 +74,18 @@ else:
                 if st.button("Generate Teaching Sequence"):
                     with st.spinner("Agent is diagnosing servers and designing the sequence..."):
                         try:
-                            # 1. Clean the key
                             clean_key = api_key.strip()
                             genai.configure(api_key=clean_key)
                             
-                            # 2. Force the API to give us the exact models it supports
                             available_models = [m.name for m in genai.list_models() if 'generateContent' in m.supported_generation_methods]
                             
-                            # 3. Grab the first valid model automatically
                             if available_models:
                                 chosen_model = available_models[0].replace('models/', '')
                                 model = genai.GenerativeModel(chosen_model)
                                 
-                                # The strict instructional prompt
                                 prompt = f"""
                                 You are an expert master teacher and curriculum designer for Georgia K-8 Math.
-                                Analyze this specific standard: {selected_standard} - {standard_desc}
+                                Analyze this specific standard: {selected_sub_standard} - {standard_desc}
                                 
                                 Output a strict, highly engaging 4-step teaching progression for this standard:
                                 1. Concrete/Visual Hook
