@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="GA Math Assistant",
+    page_title="Mr. Ward's GA Math Assistant",
     page_icon="📐",
     layout="centered"
 )
