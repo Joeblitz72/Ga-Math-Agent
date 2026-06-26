@@ -166,7 +166,7 @@ else:
 
         st.markdown("""
             <div class="math-hero">
-                <h1>➕ GA Math Assistant</h1>
+                <h1>➕ Mr. Ward's GA Math Assistant</h1>
                 <p>Select your targeted elements below to instantly craft deep learning progressions.</p>
             </div>
         """, unsafe_allow_html=True)
