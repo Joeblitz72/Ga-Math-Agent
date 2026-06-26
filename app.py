@@ -12,12 +12,8 @@ st.set_page_config(
 # --- INJECT CUSTOM COLORFUL MATH THEME ---
 st.markdown("""
     <style>
-    /* Main Background & Font Tweaks */
-    .stApp {
-        background-color: #f7fafc;
-    }
+    .stApp { background-color: #f7fafc; }
     
-    /* Hero Banner Box */
     .math-hero {
         background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         padding: 30px;
@@ -38,7 +34,6 @@ st.markdown("""
         opacity: 0.9;
     }
     
-    /* Informational Feature Cards */
     .feature-card {
         background-color: white;
         padding: 20px;
@@ -54,7 +49,6 @@ st.markdown("""
         margin-bottom: 5px;
     }
     
-    /* Styled Button Override */
     div.stButton > button:first-child {
         background: linear-gradient(135deg, #10b981 0%, #059669 100%);
         color: white !important;
@@ -78,7 +72,6 @@ st.markdown("""
 st.sidebar.title("Control Panel")
 password_input = st.sidebar.text_input("Enter App Password:", type="password")
 
-# Automatically pull the API key securely from Streamlit Secrets
 api_key = st.secrets.get("GEMINI_API_KEY", "")
 authenticated = (password_input == st.secrets.get("PASSWORD", "Password123"))
 
@@ -95,18 +88,16 @@ if not authenticated:
     """, unsafe_allow_html=True)
     st.info("👈 Enter your password in the sidebar to unlock the curriculum mapping generator.")
 else:
-    # Colorful Educational Header - Updated Title
     st.markdown("""
         <div class="math-hero">
             <h1>➕ GA Math Assistant</h1>
-            <p>Select your targeted elements below to instantly craft deep 4-step learning progressions.</p>
+            <p>Select your targeted elements below to instantly craft deep learning progressions.</p>
         </div>
     """, unsafe_allow_html=True)
     
     try:
         df = load_data()
         
-        # Grid layout for selection filters using columns
         col1, col2 = st.columns(2)
         with col1:
             grades = sorted(df['Grade'].dropna().unique())
@@ -128,7 +119,6 @@ else:
         if selected_sub_standard:
             standard_desc = filtered_df[filtered_df['Sub-Standard'] == selected_sub_standard]['Description'].values[0]
             
-            # Show standard inside a custom visual card
             st.markdown(f"""
                 <div class="feature-card">
                     <div class="feature-card-title">📍 Selected Focus Element: {selected_sub_standard}</div>
@@ -136,12 +126,11 @@ else:
                 </div>
             """, unsafe_allow_html=True)
             
-            # --- AI GENERATION LOGIC ---
             if not api_key:
                 st.error("❌ The app couldn't find your GEMINI_API_KEY inside the Streamlit Secrets vault. Please double-check your Advanced Settings.")
             else:
-                st.write("") # Spacer
-                if st.button("✨ Generate 4-Step Teaching Sequence ✨"):
+                st.write("") 
+                if st.button("✨ Generate Master Teaching Sequence ✨"):
                     with st.spinner("Analyzing standards, clearing cognitive paths, and drafting tasks..."):
                         try:
                             clean_key = api_key.strip()
@@ -153,17 +142,20 @@ else:
                                 chosen_model = available_models[0].replace('models/', '')
                                 model = genai.GenerativeModel(chosen_model)
                                 
+                                # --- THE NEW MASTER PEDAGOGY PROMPT ---
                                 prompt = f"""
                                 You are an expert master teacher and curriculum designer for Georgia K-8 Math.
                                 Analyze this specific standard: {selected_sub_standard} - {standard_desc}
                                 
-                                Output a strict, highly engaging 4-step teaching progression for this standard:
-                                1. Concrete/Visual Hook
-                                2. Direct Modeling (The Big Idea)
-                                3. Guided Practice (Algorithmic)
-                                4. Performance Task (Gamified)
+                                Output a strict, highly engaging 5-step teaching progression for this standard:
                                 
-                                Keep it concise, formatting it beautifully with bold headers and bullet points. Do not include introductory fluff.
+                                1. Concrete/Visual Hook: Provide a real-world, tangible introduction to the concept.
+                                2. Direct Modeling: Explain how to explicitly teach the core mathematical concept.
+                                3. Assessment Rigor: Generate three specific questions perfectly mimicking the cognitive demand of the Georgia Milestones Assessment (1 Multiple-Choice, 1 Multi-Select, 1 Constructed Response). Include a brief answer key.
+                                4. Interactive Game Design: Design a fully conceptualized interactive math game for this standard. Provide the game mechanics, win-state conditions, and a list of printable materials needed to build it.
+                                5. The Logician's Pushback: Explicitly identify the most common cognitive bias or misconception a student will have regarding this standard. Tell me exactly where this lesson plan is most likely to fail, and how to logically counter it.
+                                
+                                Keep it concise, formatting it beautifully with bold headers, bullet points, and clear spacing. Do not include introductory fluff.
                                 """
                                 
                                 response = model.generate_content(prompt)
