@@ -74,12 +74,12 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# --- SIDEBAR SECURITY / CONFIG ---
-st.sidebar.title("🔐 Control Panel")
-api_key = st.sidebar.text_input("Enter Gemini API Key:", type="password")
+# --- SIDEBAR CONTROL PANEL ---
+st.sidebar.title("控制 Control Panel")
 password_input = st.sidebar.text_input("Enter App Password:", type="password")
 
-# Basic password gate checking Secrets or hardcoded string
+# Automatically pull the API key securely from Streamlit Secrets
+api_key = st.secrets.get("GEMINI_API_KEY", "")
 authenticated = (password_input == st.secrets.get("PASSWORD", "Password123"))
 
 def load_data():
@@ -93,7 +93,7 @@ if not authenticated:
             <p>Welcome, Educator! Please unlock the control panel to begin planning.</p>
         </div>
     """, unsafe_allow_html=True)
-    st.info("👈 Enter the password in the sidebar to unlock the curriculum mapping generator.")
+    st.info("👈 Enter your password in the sidebar to unlock the curriculum mapping generator.")
 else:
     # Colorful Educational Header
     st.markdown("""
@@ -138,7 +138,7 @@ else:
             
             # --- AI GENERATION LOGIC ---
             if not api_key:
-                st.warning("👈 Enter your Gemini API Key in the left sidebar to activate the generator engine.")
+                st.error("❌ The app couldn't find your GEMINI_API_KEY inside the Streamlit Secrets vault. Please double-check your Advanced Settings.")
             else:
                 st.write("") # Spacer
                 if st.button("✨ Generate 4-Step Teaching Sequence ✨"):
