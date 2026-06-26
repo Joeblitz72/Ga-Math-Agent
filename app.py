@@ -153,7 +153,7 @@ else:
                                 2. Direct Modeling: Explain how to explicitly teach the core mathematical concept.
                                 3. Assessment Rigor: Generate three specific questions perfectly mimicking the cognitive demand of the Georgia Milestones Assessment (1 Multiple-Choice, 1 Multi-Select, 1 Constructed Response). Include a brief answer key.
                                 4. Interactive Game Design: Design a fully conceptualized interactive math game for this standard. Provide the game mechanics, win-state conditions, and a list of printable materials needed to build it.
-                                5. The Logician's Pushback: Explicitly identify the most common cognitive bias or misconception a student will have regarding this standard. Tell me exactly where this lesson plan is most likely to fail, and how to logically counter it.
+                                5. If the students still don't understand: Explicitly identify the most common misconception or stumbling block a student will have regarding this standard. Provide a targeted, alternative teaching strategy to reach the students who didn't grasp it the first time.
                                 
                                 Keep it concise, formatting it beautifully with bold headers, bullet points, and clear spacing. Do not include introductory fluff.
                                 """
