@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="GA 8th Grade Assistant",
+    page_title="GA Math Assistant",
     page_icon="📐",
     layout="centered"
 )
@@ -89,7 +89,7 @@ def load_data():
 if not authenticated:
     st.markdown("""
         <div class="math-hero">
-            <h1>📐 Math Framework Portal</h1>
+            <h1>📐 GA Math Assistant</h1>
             <p>Welcome, Educator! Please unlock the control panel to begin planning.</p>
         </div>
     """, unsafe_allow_html=True)
@@ -98,7 +98,7 @@ else:
     # Colorful Educational Header - Updated Title
     st.markdown("""
         <div class="math-hero">
-            <h1>➕ GA 8th Grade Assistant</h1>
+            <h1>➕ GA Math Assistant</h1>
             <p>Select your targeted elements below to instantly craft deep 4-step learning progressions.</p>
         </div>
     """, unsafe_allow_html=True)
