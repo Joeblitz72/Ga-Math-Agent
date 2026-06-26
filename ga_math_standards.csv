@@ -1,10 +1,29 @@
 Grade,Big Idea,Standard Code,Standard Description
-8,Numerical Reasoning,8.NR.1,Solve realistic problems involving the properties of integer exponents and evaluate numbers in scientific notation.
-8,Numerical Reasoning,8.NR.2,Recognize irrational numbers and use rational approximations of irrational numbers to estimate the value of unknown quantities.
-8,Patterning & Algebraic Reasoning,8.PAR.3,Create and interpret multi-step, one-variable linear equations to model and solve realistic problems.
-8,Patterning & Algebraic Reasoning,8.PAR.4,Interpret and represent linear relationships as equations, tables, graphs, and scenarios.
-8,Geometric & Spatial Reasoning,8.GSR.5,Explain congruency and similarity using physical models or software.
-8,Geometric & Spatial Reasoning,8.GSR.6,Solve realistic problems involving the volume of cylinders, cones, and spheres.
-8,Geometric & Spatial Reasoning,8.GSR.7,Apply the Pythagorean Theorem to determine unknown side lengths in right triangles and find the distance between two points.
-8,Geometric & Spatial Reasoning,8.GSR.8,Solve real-life mathematical problems involving angle measure, area, surface area, and volume.
-8,Data & Statistical Reasoning,8.DSR.9,Investigate patterns of association in bivariate data.
+8,Numerical Reasoning,8.NR.1.1,"Distinguish between rational and irrational numbers using decimal expansion. Convert a decimal expansion which repeats eventually into a rational number."
+8,Numerical Reasoning,8.NR.1.2,"Approximate irrational numbers to compare the size of irrational numbers, locate them approximately on a number line, and estimate the value of expressions."
+8,Numerical Reasoning,8.NR.2.1,"Apply the properties of integer exponents to generate equivalent numerical expressions."
+8,Numerical Reasoning,8.NR.2.2,"Use square root and cube root symbols to represent solutions to equations. Evaluate square roots of perfect squares and cube roots of perfect cubes."
+8,Numerical Reasoning,8.NR.2.3,"Use numbers expressed in scientific notation to estimate very large or very small quantities, and to express how many times as much one is than the other."
+8,Numerical Reasoning,8.NR.2.4,"Add, subtract, multiply, and divide numbers expressed in scientific notation, including problems where both decimal and scientific notation are used."
+8,Patterning & Algebraic Reasoning,8.PAR.3.1,"Interpret solutions to linear equations and inequalities in one variable."
+8,Patterning & Algebraic Reasoning,8.PAR.3.2,"Solve linear equations and inequalities in one variable with rational number coefficients, including equations and inequalities whose solutions require expanding expressions using the distributive property and collecting like terms."
+8,Patterning & Algebraic Reasoning,8.PAR.3.3,"Solve linear equations and inequalities in one variable with variables on both sides."
+8,Patterning & Algebraic Reasoning,8.PAR.3.4,"Use equations and inequalities in one variable to solve problems."
+8,Patterning & Algebraic Reasoning,8.PAR.4.1,"Graph proportional relationships, interpreting the unit rate as the slope of the graph."
+8,Patterning & Algebraic Reasoning,8.PAR.4.2,"Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane."
+8,Patterning & Algebraic Reasoning,8.PAR.4.3,"Derive the equation $y = mx$ for a line through the origin and the equation $y = mx + b$ for a line intercepting the vertical axis at b."
+8,Functional & Graphical Reasoning,8.FGR.5.1,"Understand that a function is a rule that assigns to each input exactly one output."
+8,Functional & Graphical Reasoning,8.FGR.5.2,"Compare properties of two functions each represented in a different way (algebraically, graphically, numerically in tables, or by verbal descriptions)."
+8,Functional & Graphical Reasoning,8.FGR.5.3,"Determine the rate of change and initial value of the function from a description of a relationship or from two $(x, y)$ values, including reading these from a table or from a graph."
+8,Functional & Graphical Reasoning,8.FGR.5.4,"Identify the graphs of linear and non-linear functions."
+8,Functional & Graphical Reasoning,8.FGR.5.5,"Describe qualitatively the functional relationship between two quantities by analyzing a graph."
+8,Functional & Graphical Reasoning,8.FGR.6.1,"Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities."
+8,Functional & Graphical Reasoning,8.FGR.6.2,"Know that straight lines are widely used to model relationships between two quantitative variables. For scatter plots that suggest a linear association, informally fit a straight line, and informally assess the model fit."
+8,Functional & Graphical Reasoning,8.FGR.6.3,"Use the equation of a linear model to solve problems in the context of bivariate measurement data, interpreting the slope and intercept."
+8,Functional & Graphical Reasoning,8.FGR.7.1,"Understand that solutions to a system of two linear equations in two variables correspond to points of intersection of their graphs, because points of intersection satisfy both equations simultaneously."
+8,Functional & Graphical Reasoning,8.FGR.7.2,"Solve systems of two linear equations in two variables algebraically, and estimate solutions by graphing the equations."
+8,Functional & Graphical Reasoning,8.FGR.7.3,"Solve real-world and mathematical problems leading to two linear equations in two variables."
+8,Geometric & Spatial Reasoning,8.GSR.8.1,"Explain a proof of the Pythagorean Theorem and its converse."
+8,Geometric & Spatial Reasoning,8.GSR.8.2,"Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions."
+8,Geometric & Spatial Reasoning,8.GSR.8.3,"Apply the Pythagorean Theorem to find the distance between two points in a coordinate system."
+8,Geometric & Spatial Reasoning,8.GSR.8.4,"Apply the formulas for the volume of cones, cylinders, and spheres and use them to solve real-world and mathematical problems."
