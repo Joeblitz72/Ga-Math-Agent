@@ -1,9 +1,10 @@
 Grade,Big Idea,Standard Code,Standard Description
-Grade 8,Numerical Reasoning (NR),8.NR.1,Solve problems involving irrational numbers and rational approximations.
-Grade 8,Numerical Reasoning (NR),8.NR.2,Solve problems involving radicals and integer exponents including scientific notation.
-Grade 8,Patterning & Algebraic Reasoning (PAR),8.PAR.3,Create and interpret expressions and equations to solve real-world problems.
-Grade 8,Patterning & Algebraic Reasoning (PAR),8.PAR.4,Understand the concept of a function and use functions to describe quantitative relationships.
-Grade 8,Geometric & Spatial Reasoning (GSR),8.GSR.5,Explain congruency and similarity using physical models or software.
-Grade 8,Geometric & Spatial Reasoning (GSR),8.GSR.6,Apply the Pythagorean Theorem to determine unknown side lengths in right triangles.
-Grade 8,Geometric & Spatial Reasoning (GSR),8.GSR.7,Apply the formulas for the volume of cones cylinders and spheres to solve real-world problems.
-Grade 8,Data & Statistical Reasoning (DSR),8.DSR.8,Investigate patterns of association in bivariate data.
+8,Numerical Reasoning,8.NR.1,Solve realistic problems involving the properties of integer exponents and evaluate numbers in scientific notation.
+8,Numerical Reasoning,8.NR.2,Recognize irrational numbers and use rational approximations of irrational numbers to estimate the value of unknown quantities.
+8,Patterning & Algebraic Reasoning,8.PAR.3,Create and interpret multi-step, one-variable linear equations to model and solve realistic problems.
+8,Patterning & Algebraic Reasoning,8.PAR.4,Interpret and represent linear relationships as equations, tables, graphs, and scenarios.
+8,Geometric & Spatial Reasoning,8.GSR.5,Explain congruency and similarity using physical models or software.
+8,Geometric & Spatial Reasoning,8.GSR.6,Solve realistic problems involving the volume of cylinders, cones, and spheres.
+8,Geometric & Spatial Reasoning,8.GSR.7,Apply the Pythagorean Theorem to determine unknown side lengths in right triangles and find the distance between two points.
+8,Geometric & Spatial Reasoning,8.GSR.8,Solve real-life mathematical problems involving angle measure, area, surface area, and volume.
+8,Data & Statistical Reasoning,8.DSR.9,Investigate patterns of association in bivariate data.
