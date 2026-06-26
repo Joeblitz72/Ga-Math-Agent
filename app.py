@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="GA K-8 Math Framework Agent",
+    page_title="GA 8th Grade Assistant",
     page_icon="📐",
     layout="centered"
 )
@@ -75,7 +75,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # --- SIDEBAR CONTROL PANEL ---
-st.sidebar.title("控制 Control Panel")
+st.sidebar.title("Control Panel")
 password_input = st.sidebar.text_input("Enter App Password:", type="password")
 
 # Automatically pull the API key securely from Streamlit Secrets
@@ -95,10 +95,10 @@ if not authenticated:
     """, unsafe_allow_html=True)
     st.info("👈 Enter your password in the sidebar to unlock the curriculum mapping generator.")
 else:
-    # Colorful Educational Header
+    # Colorful Educational Header - Updated Title
     st.markdown("""
         <div class="math-hero">
-            <h1>➕ GA Math Alignment Engine x²</h1>
+            <h1>➕ GA 8th Grade Assistant</h1>
             <p>Select your targeted elements below to instantly craft deep 4-step learning progressions.</p>
         </div>
     """, unsafe_allow_html=True)
