@@ -1,77 +1,89 @@
-Grade,Big Idea,Standard,Sub-Standard,Description
-K,Numerical Reasoning,K.NR.1,K.NR.1.1,"Count to 100 by ones and tens. Count forward beginning from a given number within the known sequence."
-K,Numerical Reasoning,K.NR.2,K.NR.2.1,"Write numbers from 0 to 20. Represent a number of objects with a written numeral 0-20."
-K,Numerical Reasoning,K.NR.3,K.NR.3.1,"Use place value understanding to compose and decompose numbers from 11-19."
-K,Numerical Reasoning,K.NR.4,K.NR.4.1,"Identify, write, represent, and compare numbers up to 20."
-K,Numerical Reasoning,K.NR.5,K.NR.5.1,"Model and solve addition and subtraction situations with totals within 10 using objects, drawings, or equations."
-K,Patterning & Algebraic Reasoning,K.PAR.6,K.PAR.6.1,"Explain, extend, and create repeating patterns with a repetition, not exceeding 4 and describe patterns involving time."
-K,Measurement & Data Reasoning,K.MDR.7,K.MDR.7.1,"Observe, describe, and compare the physical and measurable attributes of objects and analyze graphical displays of data."
-K,Geometric & Spatial Reasoning,K.GSR.8,K.GSR.8.1,"Identify, describe, and compare basic shapes encountered in the environment, and form 2D and 3D figures."
-1,Numerical Reasoning,1.NR.1,1.NR.1.1,"Count, write, and represent numbers up to 120; understand place value of tens and ones."
-1,Numerical Reasoning,1.NR.2,1.NR.2.1,"Use part-whole strategies, properties of operations, and a number line to add and subtract within 20."
-1,Numerical Reasoning,1.NR.3,1.NR.3.1,"Apply properties of operations and part-whole strategies to add and subtract within 100."
-1,Patterning & Algebraic Reasoning,1.PAR.4,1.PAR.4.1,"Identify, describe, extend, and create growing and shrinking patterns."
-1,Measurement & Data Reasoning,1.MDR.5,1.MDR.5.1,"Measure lengths indirectly and by iterating length units; represent and interpret data."
-1,Measurement & Data Reasoning,1.MDR.6,1.MDR.6.1,"Tell and write time in hours and half-hours using analog and digital clocks."
-1,Geometric & Spatial Reasoning,1.GSR.7,1.GSR.7.1,"Compose and decompose 2D and 3D shapes; partition circles and rectangles into halves and quarters."
-2,Numerical Reasoning,2.NR.1,2.NR.1.1,"Explain the value of a three-digit number using hundreds, tens, and ones in a variety of ways."
-2,Numerical Reasoning,2.NR.1,2.NR.1.2,"Count forward and backward by ones from any number within 1000. Count by fives, tens, and hundreds."
-2,Numerical Reasoning,2.NR.1,2.NR.1.3,"Represent, compare, and order whole numbers to 1000 with an emphasis on place value and equality."
-2,Numerical Reasoning,2.NR.2,2.NR.2.1,"Fluently add and subtract within 20 using a variety of mental, part-whole strategies."
-2,Numerical Reasoning,2.NR.2,2.NR.2.2,"Find 10 more or 10 less than a given three-digit number and find 100 more or 100 less."
-2,Numerical Reasoning,2.NR.2,2.NR.2.3,"Solve problems involving the addition and subtraction of two-digit numbers using part-whole strategies."
-2,Numerical Reasoning,2.NR.2,2.NR.2.4,"Fluently add and subtract within 100 using strategies based on place value and properties of operations."
-2,Numerical Reasoning,2.NR.3,2.NR.3.1,"Work with equal groups to gain foundations for multiplication through real-life, mathematical problems."
-2,Patterning & Algebraic Reasoning,2.PAR.4,2.PAR.4.1,"Identify, describe, extend, and create repeating patterns, growing patterns, and shrinking patterns."
-2,Measurement & Data Reasoning,2.MDR.5,2.MDR.5.1,"Estimate and measure the lengths of objects to solve problems found in real-life using standard units."
-2,Measurement & Data Reasoning,2.MDR.5,2.MDR.5.2,"Analyze graphical displays of data (bar graphs, pictographs) to answer relevant questions."
-2,Measurement & Data Reasoning,2.MDR.6,2.MDR.6.1,"Solve real-life problems involving time to the nearest five minutes."
-2,Measurement & Data Reasoning,2.MDR.6,2.MDR.6.2,"Solve real-life problems involving money, using dollar bills, quarters, dimes, nickels, and pennies."
-2,Geometric & Spatial Reasoning,2.GSR.7,2.GSR.7.1,"Describe, compare and sort 2-D and 3-D shapes given a set of attributes."
-2,Geometric & Spatial Reasoning,2.GSR.7,2.GSR.7.2,"Identify at least one line of symmetry in everyday objects to describe each object as a whole."
-2,Geometric & Spatial Reasoning,2.GSR.7,2.GSR.7.3,"Partition circles and rectangles into two, three, or four equal shares (halves, thirds, fourths)."
-2,Geometric & Spatial Reasoning,2.GSR.7,2.GSR.7.4,"Recognize that equal shares of identical wholes may be different shapes within the same whole."
-3,Numerical Reasoning,3.NR.1,3.NR.1.1,"Use place value understanding to round whole numbers to the nearest 10 or 100."
-3,Numerical Reasoning,3.NR.2,3.NR.2.1,"Interpret products and quotients of whole numbers; solve multiplication and division word problems within 100."
-3,Numerical Reasoning,3.NR.3,3.NR.3.1,"Understand fractions as numbers; represent fractions on a number line."
-3,Numerical Reasoning,3.NR.4,3.NR.4.1,"Explain equivalence of fractions and compare fractions by reasoning about their size."
-3,Patterning & Algebraic Reasoning,3.PAR.5,3.PAR.5.1,"Identify arithmetic patterns (including patterns in the addition table or multiplication table) and explain them using properties of operations."
-3,Measurement & Data Reasoning,3.MDR.6,3.MDR.6.1,"Solve problems involving measurement and estimation of intervals of time, liquid volumes, and masses of objects."
-3,Geometric & Spatial Reasoning,3.GSR.7,3.GSR.7.1,"Understand area as an attribute of plane figures and measure area by counting unit squares or multiplying side lengths."
-4,Numerical Reasoning,4.NR.1,4.NR.1.1,"Recognize that in a multi-digit whole number, a digit in one place represents ten times what it represents in the place to its right."
-4,Numerical Reasoning,4.NR.2,4.NR.2.1,"Fluently add and subtract multi-digit whole numbers using the standard algorithm."
-4,Numerical Reasoning,4.NR.4,4.NR.4.1,"Explain why a fraction a/b is equivalent to a fraction (n x a)/(n x b) by using visual fraction models."
-4,Patterning & Algebraic Reasoning,4.PAR.5,4.PAR.5.1,"Find all factor pairs for a whole number in the range 1-100; recognize prime and composite numbers."
-4,Measurement & Data Reasoning,4.MDR.6,4.MDR.6.1,"Solve problems involving measurement and conversion of measurements from a larger unit to a smaller unit."
-4,Geometric & Spatial Reasoning,4.GSR.7,4.GSR.7.1,"Recognize angles as geometric shapes that are formed wherever two rays share a common endpoint; measure angles in degrees using a protractor."
-5,Numerical Reasoning,5.NR.1,5.NR.1.1,"Recognize that in a multi-digit number, a digit in one place represents 10 times as much as it represents in the place to its right and 1/10 of what it represents in the place to its left."
-5,Numerical Reasoning,5.NR.3,5.NR.3.1,"Add and subtract fractions with unlike denominators, including mixed numbers, by replacing given fractions with equivalent fractions."
-5,Patterning & Algebraic Reasoning,5.PAR.4,5.PAR.4.1,"Write, evaluate, and interpret numerical expressions with grouping symbols (parentheses, brackets, or braces)."
-5,Measurement & Data Reasoning,5.MDR.6,5.MDR.6.1,"Convert among different-sized standard measurement units within a given measurement system."
-5,Geometric & Spatial Reasoning,5.GSR.8,5.GSR.8.1,"Graph points in the first quadrant of the coordinate plane, and interpret coordinate values of points in the context of the situation."
-6,Numerical Reasoning,6.NR.1,6.NR.1.1,"Solve relevant, mathematical problems involving operations with whole numbers, fractions, and decimal numbers."
-6,Numerical Reasoning,6.NR.2,6.NR.2.1,"Apply operations with whole numbers, fractions and decimals within relevant applications."
-6,Numerical Reasoning,6.NR.3,6.NR.3.1,"Solve a variety of problems involving whole numbers and their opposites; model rational numbers on a number line."
-6,Numerical Reasoning,6.NR.4,6.NR.4.1,"Solve a variety of contextual problems involving ratios, unit rates, equivalent ratios, and percentages."
-6,Patterning & Algebraic Reasoning,6.PAR.6,6.PAR.6.1,"Identify, write, evaluate, and interpret numerical and algebraic expressions as mathematical models to explain relevant situations."
-6,Patterning & Algebraic Reasoning,6.PAR.7,6.PAR.7.1,"Write and solve one-step equations and inequalities as mathematical models to explain authentic, realistic situations."
-6,Geometric & Spatial Reasoning,6.GSR.5,6.GSR.5.1,"Solve practical problems involving area of polygons and volume of right rectangular prisms."
-7,Numerical Reasoning,7.NR.1,7.NR.1.1,"Solve relevant, mathematical problems, including multi-step problems, involving the four operations with rational numbers."
-7,Patterning & Algebraic Reasoning,7.PAR.2,7.PAR.2.1,"Use properties of operations, generate equivalent expressions and interpret the expressions to explain relevant contextual situations."
-7,Patterning & Algebraic Reasoning,7.PAR.3,7.PAR.3.1,"Represent authentic situations using equations and inequalities with variables; solve symbolically using properties of equality."
-7,Patterning & Algebraic Reasoning,7.PAR.4,7.PAR.4.1,"Recognize proportional relationships in relevant, mathematical problems; represent, solve, and explain these relationships with tables, graphs, and equations."
-7,Geometric & Spatial Reasoning,7.GSR.5,7.GSR.5.1,"Solve practical problems involving angle measurement, circles, area of circles, and surface area of prisms and cylinders."
-7,Probability Reasoning,7.PR.6,7.PR.6.1,"Using mathematical reasoning, investigate chance processes and develop, evaluate, and use probability models to find probabilities of simple events."
-8,Numerical Reasoning,8.NR.1,8.NR.1.1,"Distinguish between rational and irrational numbers using decimal expansion. Convert a decimal expansion which repeats eventually into a rational number."
-8,Numerical Reasoning,8.NR.1,8.NR.1.2,"Approximate irrational numbers to compare the size of irrational numbers, locate them approximately on a number line, and estimate the value of expressions."
-8,Numerical Reasoning,8.NR.2,8.NR.2.1,"Apply the properties of integer exponents to generate equivalent numerical expressions."
-8,Numerical Reasoning,8.NR.2,8.NR.2.2,"Use square root and cube root symbols to represent solutions to equations. Evaluate square roots of perfect squares and cube roots of perfect cubes."
-8,Patterning & Algebraic Reasoning,8.PAR.3,8.PAR.3.1,"Interpret solutions to linear equations and inequalities in one variable."
-8,Patterning & Algebraic Reasoning,8.PAR.3,8.PAR.3.2,"Solve linear equations and inequalities in one variable with rational number coefficients."
-8,Patterning & Algebraic Reasoning,8.PAR.4,8.PAR.4.1,"Graph proportional relationships, interpreting the unit rate as the slope of the graph."
-8,Functional & Graphical Reasoning,8.FGR.5,8.FGR.5.1,"Understand that a function is a rule that assigns to each input exactly one output."
-8,Functional & Graphical Reasoning,8.FGR.6,8.FGR.6.1,"Construct and interpret scatter plots for bivariate measurement data to investigate patterns of association between two quantities."
-8,Functional & Graphical Reasoning,8.FGR.7,8.FGR.7.1,"Understand that solutions to a system of two linear equations in two variables correspond to points of intersection of their graphs."
-8,Geometric & Spatial Reasoning,8.GSR.8,8.GSR.8.1,"Explain a proof of the Pythagorean Theorem and its converse."
-8,Geometric & Spatial Reasoning,8.GSR.8,8.GSR.8.2,"Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions."
-8,Geometric & Spatial Reasoning,8.GSR.8,8.GSR.8.4,"Apply the formulas for the volume of cones, cylinders, and spheres and use them to solve real-world and mathematical problems."
+ga_standards = {
+    "Kindergarten": {
+        "K.NR.1: Numbers and Quantities to 20": ["K.NR.1.1", "K.NR.1.2", "K.NR.1.3"],
+        "K.NR.2: Count Sequences to 100": ["K.NR.2.1", "K.NR.2.2"],
+        "K.NR.3: Place Value 11-19": ["K.NR.3.1"],
+        "K.NR.4: Compare Numbers to 20": ["K.NR.4.1", "K.NR.4.2"],
+        "K.NR.5: Addition and Subtraction within 10": ["K.NR.5.1", "K.NR.5.2", "K.NR.5.3", "K.NR.5.4"],
+        "K.PAR.6: Repeating Patterns": ["K.PAR.6.1", "K.PAR.6.2"],
+        "K.MDR.7: Measurable Attributes and Data": ["K.MDR.7.1", "K.MDR.7.2", "K.MDR.7.3"],
+        "K.GSR.8: Basic Shapes": ["K.GSR.8.1", "K.GSR.8.2", "K.GSR.8.3", "K.GSR.8.4"]
+    },
+    "1st Grade": {
+        "1.NR.1: Numbers to 120": ["1.NR.1.1", "1.NR.1.2"],
+        "1.NR.2: Place Value within 100": ["1.NR.2.1", "1.NR.2.2", "1.NR.2.3", "1.NR.2.4"],
+        "1.NR.3: Fractions (Halves/Fourths)": ["1.NR.3.1"],
+        "1.NR.4: Addition/Subtraction within 20": ["1.NR.4.1", "1.NR.4.2", "1.NR.4.3", "1.NR.4.4"],
+        "1.NR.5: Addition/Subtraction within 100": ["1.NR.5.1", "1.NR.5.2", "1.NR.5.3"],
+        "1.PAR.6: Patterns and Rules": ["1.PAR.6.1"],
+        "1.MDR.7: Measurement and Time": ["1.MDR.7.1", "1.MDR.7.2", "1.MDR.7.3"],
+        "1.MDR.8: Data Analysis": ["1.MDR.8.1", "1.MDR.8.2"],
+        "1.GSR.9: Attributes of Shapes": ["1.GSR.9.1", "1.GSR.9.2", "1.GSR.9.3"]
+    },
+    "2nd Grade": {
+        "2.NR.1: Place Value to 1000": ["2.NR.1.1", "2.NR.1.2", "2.NR.1.3"],
+        "2.NR.2: Add/Subtract within 1000": ["2.NR.2.1", "2.NR.2.2", "2.NR.2.3", "2.NR.2.4"],
+        "2.NR.3: Foundations of Multiplication": ["2.NR.3.1", "2.NR.3.2"],
+        "2.NR.4: Fractions (Halves, Thirds, Fourths)": ["2.NR.4.1", "2.NR.4.2"],
+        "2.PAR.5: Number Patterns": ["2.PAR.5.1"],
+        "2.MDR.6: Measure/Estimate Lengths": ["2.MDR.6.1", "2.MDR.6.2", "2.MDR.6.3", "2.MDR.6.4"],
+        "2.MDR.7: Time and Money": ["2.MDR.7.1", "2.MDR.7.2", "2.MDR.7.3"],
+        "2.MDR.8: Represent/Interpret Data": ["2.MDR.8.1", "2.MDR.8.2"],
+        "2.GSR.9: Shapes and Attributes": ["2.GSR.9.1", "2.GSR.9.2", "2.GSR.9.3"]
+    },
+    "3rd Grade": {
+        "3.NR.1: Place Value and Rounding": ["3.NR.1.1", "3.NR.1.2"],
+        "3.NR.2: Add/Subtract within 10,000": ["3.NR.2.1"],
+        "3.NR.3: Multiplication/Division Foundations": ["3.NR.3.1", "3.NR.3.2", "3.NR.3.3", "3.NR.3.4"],
+        "3.NR.4: Fractions (Unit/Equivalent)": ["3.NR.4.1", "3.NR.4.2", "3.NR.4.3", "3.NR.4.4"],
+        "3.PAR.5: Algebraic Thinking/Patterns": ["3.PAR.5.1", "3.PAR.5.2"],
+        "3.MDR.6: Measurement, Time, Volume, Mass": ["3.MDR.6.1", "3.MDR.6.2", "3.MDR.6.3", "3.MDR.6.4"],
+        "3.MDR.7: Categorical/Quantitative Data": ["3.MDR.7.1", "3.MDR.7.2"],
+        "3.GSR.8: Area/Perimeter, Shape Attributes": ["3.GSR.8.1", "3.GSR.8.2", "3.GSR.8.3"]
+    },
+    "4th Grade": {
+        "4.NR.1: Place Value to 1,000,000": ["4.NR.1.1", "4.NR.1.2"],
+        "4.NR.2: Multi-Digit Operations": ["4.NR.2.1", "4.NR.2.2", "4.NR.2.3", "4.NR.2.4", "4.NR.2.5"],
+        "4.NR.3: Fractions (Add/Subtract/Multiply)": ["4.NR.3.1", "4.NR.3.2", "4.NR.3.3", "4.NR.3.4"],
+        "4.NR.4: Decimal Fractions": ["4.NR.4.1", "4.NR.4.2", "4.NR.4.3"],
+        "4.PAR.5: Patterns/Rules": ["4.PAR.5.1", "4.PAR.5.2"],
+        "4.MDR.6: Measurement and Conversions": ["4.MDR.6.1", "4.MDR.6.2", "4.MDR.6.3"],
+        "4.GSR.7: Angles and Lines": ["4.GSR.7.1", "4.GSR.7.2", "4.GSR.7.3"]
+    },
+    "5th Grade": {
+        "5.NR.1: Decimal Place Value": ["5.NR.1.1", "5.NR.1.2"],
+        "5.NR.2: Operations with Decimals": ["5.NR.2.1", "5.NR.2.2", "5.NR.2.3"],
+        "5.NR.3: Operations with Fractions": ["5.NR.3.1", "5.NR.3.2", "5.NR.3.3", "5.NR.3.4"],
+        "5.PAR.4: Expressions": ["5.PAR.4.1", "5.PAR.4.2"],
+        "5.MDR.5: Data and Volumes": ["5.MDR.5.1", "5.MDR.5.2", "5.MDR.5.3"],
+        "5.GSR.6: Coordinate Plane/Classifying Polygons": ["5.GSR.6.1", "5.GSR.6.2", "5.GSR.6.3"]
+    },
+    "6th Grade": {
+        "6.NR.1: Number System Operations": ["6.NR.1.1", "6.NR.1.2", "6.NR.1.3"],
+        "6.NR.2: Operations with Decimals": ["6.NR.2.1", "6.NR.2.2", "6.NR.2.3", "6.NR.2.4", "6.NR.2.5", "6.NR.2.6"],
+        "6.NR.3: Rational Numbers": ["6.NR.3.1", "6.NR.3.2", "6.NR.3.3", "6.NR.3.4", "6.NR.3.5", "6.NR.3.6"],
+        "6.NR.4: Ratios and Proportions": ["6.NR.4.1", "6.NR.4.2", "6.NR.4.3", "6.NR.4.4", "6.NR.4.5", "6.NR.4.6", "6.NR.4.7"],
+        "6.PAR.5: Expressions": ["6.PAR.5.1", "6.PAR.5.2", "6.PAR.5.3", "6.PAR.5.4"],
+        "6.PAR.6: Equations and Inequalities": ["6.PAR.6.1", "6.PAR.6.2", "6.PAR.6.3", "6.PAR.6.4"],
+        "6.GSR.7: Area, Surface Area, and Volume": ["6.GSR.7.1", "6.GSR.7.2", "6.GSR.7.3", "6.GSR.7.4"],
+        "6.DSR.8: Data/Statistical Reasoning": ["6.DSR.8.1", "6.DSR.8.2", "6.DSR.8.3", "6.DSR.8.4", "6.DSR.8.5"]
+    },
+    "7th Grade": {
+        "7.NR.1: Rational Numbers Operations": ["7.NR.1.1", "7.NR.1.2", "7.NR.1.3", "7.NR.1.4", "7.NR.1.5", "7.NR.1.6"],
+        "7.PAR.2: Expressions": ["7.PAR.2.1", "7.PAR.2.2", "7.PAR.2.3"],
+        "7.PAR.3: Equations and Inequalities": ["7.PAR.3.1", "7.PAR.3.2", "7.PAR.3.3"],
+        "7.PAR.4: Proportional Relationships": ["7.PAR.4.1", "7.PAR.4.2", "7.PAR.4.3", "7.PAR.4.4", "7.PAR.4.5", "7.PAR.4.6"],
+        "7.GSR.5: Geometry Connections": ["7.GSR.5.1", "7.GSR.5.2", "7.GSR.5.3", "7.GSR.5.4", "7.GSR.5.5", "7.GSR.5.6"],
+        "7.PR.6: Probability": ["7.PR.6.1", "7.PR.6.2", "7.PR.6.3", "7.PR.6.4", "7.PR.6.5", "7.PR.6.6"]
+    },
+    "8th Grade": {
+        "8.NR.1: Rational and Irrational Numbers": ["8.NR.1.1", "8.NR.1.2"],
+        "8.NR.2: Integer Exponents and Scientific Notation": ["8.NR.2.1", "8.NR.2.2", "8.NR.2.3", "8.NR.2.4"],
+        "8.PAR.3: Linear Equations and Inequalities": ["8.PAR.3.1", "8.PAR.3.2", "8.PAR.3.3", "8.PAR.3.4", "8.PAR.3.5", "8.PAR.3.6"],
+        "8.PAR.4: Proportional and Non-Proportional Relationships": ["8.PAR.4.1", "8.PAR.4.2"],
+        "8.FGR.5: Functions": ["8.FGR.5.1", "8.FGR.5.2", "8.FGR.5.3", "8.FGR.5.4", "8.FGR.5.5", "8.FGR.5.6", "8.FGR.5.7", "8.FGR.5.8", "8.FGR.5.9"],
+        "8.FGR.6: Bivariate Data and Scatter Plots": ["8.FGR.6.1", "8.FGR.6.2", "8.FGR.6.3", "8.FGR.6.4"],
+        "8.FGR.7: Systems of Linear Equations": ["8.FGR.7.1", "8.FGR.7.2", "8.FGR.7.3", "8.FGR.7.4", "8.FGR.7.5"],
+        "8.GSR.8: Pythagorean Theorem and Volume": ["8.GSR.8.1", "8.GSR.8.2", "8.GSR.8.3", "8.GSR.8.4"]
+    }
+}
