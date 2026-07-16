@@ -225,6 +225,7 @@ else:
                             # Clean the AI output to remove markdown code blocks
                             clean_text = response.text.replace("```html", "").replace("```", "").strip()
                             st.markdown(clean_text, unsafe_allow_html=True)
+                            
                         except Exception as ai_error:
                             st.error(f"API Generation failed. Error details: {ai_error}")
 
