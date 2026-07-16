@@ -1,8 +1,6 @@
 import streamlit as st
+import pandas as pd
 import google.generativeai as genai
-
-# Import our custom standards dictionary instead of reading a CSV!
-from standards import ga_standards
 
 # --- PAGE CONFIGURATION ---
 st.set_page_config(
@@ -17,6 +15,9 @@ password_input = st.sidebar.text_input("Enter App Password:", type="password")
 
 api_key = st.secrets.get("GEMINI_API_KEY", "")
 authenticated = (password_input == st.secrets.get("PASSWORD", "Password123"))
+
+def load_data():
+    return pd.read_csv("ga_math_standards.csv")
 
 # --- MAIN APP PORTAL ---
 if not authenticated:
@@ -50,29 +51,37 @@ if not authenticated:
     st.info("👈 Enter your password in the sidebar to unlock the curriculum mapping generator.")
 else:
     try:
-        # Load grades from our custom Python dictionary
-        grades = list(ga_standards.keys())
+        df = load_data()
+        
+        grades = sorted(df['Grade'].dropna().unique(), key=lambda x: (0, x) if x == 'K' else (1, int(x)))
         
         col1, col2 = st.columns(2)
         with col1:
             selected_grade = st.selectbox("🎯 1. Target Grade:", grades)
-            main_standards = list(ga_standards[selected_grade].keys())
-            selected_main_standard = st.selectbox("🗂️ 2. Main Standard:", main_standards)
+            filtered_df = df[df['Grade'] == selected_grade]
+            
+            big_ideas = sorted(filtered_df['Big Idea'].dropna().unique())
+            selected_big_idea = st.selectbox("💡 2. Big Idea:", big_ideas)
+            filtered_df = filtered_df[filtered_df['Big Idea'] == selected_big_idea]
             
         with col2:
-            sub_standards = ga_standards[selected_grade][selected_main_standard]
-            selected_sub_standard = st.selectbox("🔍 3. Specific Target Element:", sub_standards)
+            main_standards = sorted(filtered_df['Standard'].dropna().unique())
+            selected_main_standard = st.selectbox("🗂️ 3. Main Standard:", main_standards)
+            filtered_df = filtered_df[filtered_df['Standard'] == selected_main_standard]
+
+            sub_standards = sorted(filtered_df['Sub-Standard'].dropna().unique())
+            selected_sub_standard = st.selectbox("🔍 4. Specific Target Element:", sub_standards)
 
         # --- DYNAMIC GRADE-BAND THEMING ENGINE ---
-        if selected_grade in ['Kindergarten', '1st Grade', '2nd Grade']:
+        if selected_grade in ['K', '1', '2']:
             primary_gradient = "linear-gradient(135deg, rgba(245, 158, 11, 0.9) 0%, rgba(217, 119, 6, 0.9) 100%)"
             accent_color = "#d97706"
             btn_gradient = "linear-gradient(135deg, #f59e0b 0%, #b45309 100%)"
-        elif selected_grade in ['3rd Grade', '4th Grade', '5th Grade']:
+        elif selected_grade in ['3', '4', '5']:
             primary_gradient = "linear-gradient(135deg, rgba(16, 185, 129, 0.9) 0%, rgba(4, 120, 87, 0.9) 100%)"
             accent_color = "#047857"
             btn_gradient = "linear-gradient(135deg, #10b981 0%, #064e3b 100%)"
-        else: # 6th, 7th, 8th Grade
+        else:
             primary_gradient = "linear-gradient(135deg, rgba(30, 58, 138, 0.9) 0%, rgba(59, 130, 246, 0.9) 100%)"
             accent_color = "#1e3a8a"
             btn_gradient = "linear-gradient(135deg, #10b981 0%, #059669 100%)"
@@ -163,10 +172,12 @@ else:
         """, unsafe_allow_html=True)
 
         if selected_sub_standard:
+            standard_desc = filtered_df[filtered_df['Sub-Standard'] == selected_sub_standard]['Description'].values[0]
+            
             st.markdown(f"""
                 <div class="feature-card">
                     <div class="feature-card-title">📍 Selected Focus Element: {selected_sub_standard}</div>
-                    <div style="color: #4b5563;">Developing a mastery sequence for {selected_sub_standard} under the domain: {selected_main_standard}</div>
+                    <div style="color: #4b5563;">{standard_desc}</div>
                 </div>
             """, unsafe_allow_html=True)
             
@@ -180,12 +191,12 @@ else:
                             clean_key = api_key.strip()
                             genai.configure(api_key=clean_key)
                             
-                            # Using the current, reliable fast model
+                            # Standardized to the reliable Gemini Flash model
                             model = genai.GenerativeModel("gemini-2.5-flash")
-                            
+                                
                             prompt = f"""
                             You are an expert master teacher and curriculum designer for Georgia K-8 Math.
-                            Analyze this specific standard: {selected_sub_standard} from the domain: {selected_main_standard}.
+                            Analyze this specific standard: {selected_sub_standard} - {standard_desc}
                             
                             Output a strict, highly engaging 5-step teaching progression for this standard.
                             You MUST wrap each step exactly in the provided HTML block formatting below so it renders as visual cards. Do not use generic markdown headers.
@@ -222,12 +233,12 @@ else:
                             st.success(f"Sequence Successfully Generated!")
                             st.markdown("---")
                             
-                            # Clean the AI output to remove markdown code blocks
+                            # Clean the AI output to remove markdown code blocks so cards render correctly!
                             clean_text = response.text.replace("```html", "").replace("```", "").strip()
                             st.markdown(clean_text, unsafe_allow_html=True)
-                            
+                                
                         except Exception as ai_error:
                             st.error(f"API Generation failed. Error details: {ai_error}")
 
     except Exception as e:
-        st.error(f"Error loading standards data. Please ensure 'standards.py' is saved correctly in your repository. Details: {e}")
+        st.error(f"Error reading CSV. Details: {e}")
